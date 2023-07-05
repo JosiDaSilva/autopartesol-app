@@ -6,19 +6,7 @@ export const Card = () => {
  
   const { onAddProduct}= useContext(cartContext);
 
-  const [value1, setValue1] = useState(0);
-  const [value2, setValue2] = useState(0);
-  const [unidades, setUnidades] = useState(0);
-  function getValue1(e) {
-    setValue1(e.target.value);
-  }
-  function getValue2(e) {
-    setValue2(e.target.value);
-  }
-  function sum() {
-    setUnidades(parseInt(value1) + parseInt(value2));
-  }
-
+ 
 
 
   return (
@@ -35,15 +23,7 @@ export const Card = () => {
             <h2 className="text-s">{product.aplicación}</h2>
             <span className='text-gray-300'>${product.precio},00</span>
           <p className="text-s">Cód. Orig: {product.código_original}</p>
-          <div className="App">
-      <input type="text" onChange={getValue1} placeholder="Pedir a Misiones" />
-      <input type="text" onChange={getValue2} placeholder="Pedir a Corrientes" />
-      <br/>
-      <button className="bg-[#1F1D2B] p-1 
-rounded-xl text-white text-center justify-center" onClick={sum}>Pedir</button>
-      <br />
-      {unidades}
-    </div>
+     
          
 
    <div className="grid justify-center gap-2">
